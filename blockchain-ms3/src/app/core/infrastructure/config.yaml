@@ -1,0 +1,21 @@
+development:
+  database:
+    host: ${POSTGRES_HOST}
+    port: ${POSTGRES_PORT}
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    dbname: ${POSTGRES_DB}
+  elasticsearch:
+    host: ${ELASTICSEARCH_HOST}
+    index: ${ELASTICSEARCH_INDEX}
+
+production:
+  database:
+    host: ${POSTGRES_HOST}
+    port: ${POSTGRES_PORT}
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    dbname: ${POSTGRES_DB}
+  elasticsearch:
+    host: ${ELASTICSEARCH_HOST}
+    index: ${ELASTICSEARCH_INDEX}

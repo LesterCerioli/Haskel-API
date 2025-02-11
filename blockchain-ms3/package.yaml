@@ -1,0 +1,106 @@
+name: blockchain-ms3
+version: 0.1.0.0
+github: "githubuser/blockchain-ms3"
+license: BSD-3-Clause
+author: "Lucas Technology Service"
+maintainer: "lesterlucasit@hotmail.com"
+copyright: "2025 Lucas Technology Service"
+
+extra-source-files:
+  - README.md
+  - CHANGELOG.md
+
+description: Please see the README on Azure DevOps at <https://dev.azure.com/lesterlucasit/Bit-Api-Gateway/_git/Bit-Payment-Gateway-Api-New>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - scotty   
+  - wai                   
+  - wai-extra
+  - wai-middleware-static              
+  - text                   
+  - aeson                  
+  - http-client            
+  - http-conduit  
+  - http-types         
+  - postgresql-simple      
+  - amqp                   
+  - time                   
+  - warp                   
+  - mtl                    
+  - exceptions             
+  - network                
+  - bytestring   
+  - transformers
+  - swagger2                # ✅ Replace scotty-swagger with this
+  - wai-swagger-ui          # ✅ For serving Swagger UI
+  - data-default
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Wpartial-fields
+  - -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  blockchain-ms3-exe:
+    main: Main.hs
+    source-dirs: src/app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
+      - scotty
+      - text
+      - aeson
+      - http-client
+      - http-conduit
+      - postgresql-simple
+      - amqp
+      - time
+      - warp
+      - mtl
+      - exceptions
+      - network
+      - bytestring
+      - blockchain-ms3
+      - scotty-swagger      # ✅ Ensure Swagger is included
+      - swagger2
+      - wai
+      - wai-extra
+      - network-wai
+
+tests:
+  blockchain-ms3-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
+      - scotty
+      - text
+      - aeson
+      - http-client
+      - http-conduit
+      - postgresql-simple
+      - amqp
+      - time
+      - warp
+      - mtl
+      - exceptions
+      - network
+      - bytestring
+      - blockchain-ms3

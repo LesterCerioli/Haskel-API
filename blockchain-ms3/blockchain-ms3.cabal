@@ -1,0 +1,132 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           blockchain-ms3
+version:        0.1.0.0
+description:    Please see the README on Azure DevOps at <https://dev.azure.com/lesterlucasit/Bit-Api-Gateway/_git/Bit-Payment-Gateway-Api-New>
+homepage:       https://github.com/githubuser/blockchain-ms3#readme
+bug-reports:    https://github.com/githubuser/blockchain-ms3/issues
+author:         Lucas Technology Service
+maintainer:     lesterlucasit@hotmail.com
+copyright:      2025 Lucas Technology Service
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/blockchain-ms3
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_blockchain_ms3
+  autogen-modules:
+      Paths_blockchain_ms3
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      aeson
+    , amqp
+    , base >=4.7 && <5
+    , bytestring
+    , data-default
+    , exceptions
+    , http-client
+    , http-conduit
+    , http-types
+    , mtl
+    , network
+    , postgresql-simple
+    , scotty
+    , swagger2
+    , text
+    , time
+    , transformers
+    , wai
+    , wai-extra
+    , wai-middleware-static
+    , wai-swagger-ui
+    , warp
+  default-language: Haskell2010
+
+executable blockchain-ms3-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_blockchain_ms3
+  autogen-modules:
+      Paths_blockchain_ms3
+  hs-source-dirs:
+      src/app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , amqp
+    , base
+    , blockchain-ms3
+    , bytestring
+    , data-default
+    , exceptions
+    , http-client
+    , http-conduit
+    , http-types
+    , mtl
+    , network
+    , network-wai
+    , postgresql-simple
+    , scotty
+    , scotty-swagger
+    , swagger2
+    , text
+    , time
+    , transformers
+    , wai
+    , wai-extra
+    , wai-middleware-static
+    , wai-swagger-ui
+    , warp
+  default-language: Haskell2010
+
+test-suite blockchain-ms3-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_blockchain_ms3
+  autogen-modules:
+      Paths_blockchain_ms3
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , amqp
+    , base
+    , blockchain-ms3
+    , bytestring
+    , data-default
+    , exceptions
+    , http-client
+    , http-conduit
+    , http-types
+    , mtl
+    , network
+    , postgresql-simple
+    , scotty
+    , swagger2
+    , text
+    , time
+    , transformers
+    , wai
+    , wai-extra
+    , wai-middleware-static
+    , wai-swagger-ui
+    , warp
+  default-language: Haskell2010
